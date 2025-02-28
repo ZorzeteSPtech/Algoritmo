@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proximo ep, goku morre</title>
+</head>
+<body>
+    Qual seu ki base grande guerreiro?
+    <br><br>
+    <input type="number" id="input_ki">
+    <br><br>
+    Transformar em...
+    <button onclick="SSJ()">SSJ</button>
+    <button onclick="SSJ2()">SSJ 2</button>
+    <button onclick="SSJ3()">SSJ 3</button>
+
+    <div id="div_qtd"></div>
+</body>
+</html>
+
+<script>
+
+    var nome1 = "SSJ";
+    var nome2 = "SSJ2";
+    var nome3 ="SSJ3";
+
+    function SSJ(){
+
+        var ki = Number(input_ki.value);
+        var qtd = ki * 50;
+
+        div_qtd.innerHTML = `Após se transformar em ${nome1}, o ki desse Sayajin passa a ser de ${qtd}`;
+
+    }
+
+    function SSJ2(){
+        var ki = Number(input_ki.value);
+        var qtd = ki * 100;
+
+        div_qtd.innerHTML = `Após se transformar em ${nome2}, o ki desse Sayajin passa a ser de ${qtd}`;
+        
+    }
+
+    function SSJ3(){
+        var ki = Number(input_ki.value);
+        var qtd = ki * 200;
+
+        div_qtd.innerHTML = `Após se transformar em ${nome3}, o ki desse Sayajin passa a ser de ${qtd}`;
+
+    }
+
+</script>

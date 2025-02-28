@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Média Aluno</title>
+</head>
+<body>
+    Insira sua nota na continuada:
+    <br><br>
+    <input id = "input_n1" type = "number">
+    <br><br>
+    Insira sua nota na semestral:
+    <br><br>
+    <input id = "input_n2" type = "number">
+    <br><br>
+    Qual o seu nome?
+    <br><br>
+    <input id = "input_nome" type = "text">
+    <button onclick = "nota()">Calcular</button>
+</body>
+</html>
+
+<script>
+
+    function nota(){
+
+        var n1 = input_n1.value;
+        var n2 = input_n2.value;
+        var nome = input_nome.value;
+        var calc = (n1 * 0.4) + (n2 * 0.6);
+
+        alert ("A média de "+ nome + " será de " + calc);
+
+    }
+
+</script>

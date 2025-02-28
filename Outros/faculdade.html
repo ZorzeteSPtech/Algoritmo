@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faculdade</title>
+</head>
+<body>
+    Insira suas 3 notas:
+    <br><br>
+    <input type="text" id="input_nota1">
+    <input type="text" id="input_nota2">
+    <input type="text" id="input_nota3">
+    <br><br>
+    <button onclick="calcular()">Calcular</button>
+
+    <div id="div_nota">Sua nota foi...</div>
+    
+</body>
+</html>
+
+<script>
+
+    function calcular(){
+
+        var n1 = Number(input_nota1.value);
+        var n2 = Number(input_nota2.value);
+        var n3 = Number(input_nota3.value);
+
+        var calc = (n1 + n2 + n3) / 3;
+
+        div_nota.innerHTML = (`Sua média foi de ${calc} `);
+
+        if (calc >= 9.4){
+
+            div_nota.innerHTML += (`Parábens, você é fora de série!!`);    
+
+        }
+
+    }
+
+</script>

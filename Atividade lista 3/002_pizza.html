@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizzaria Macarone</title>
+</head>
+<body>
+    Qual o valor da pizza meu bacana?
+    <br><br>
+    <input id = "input_valor" type = "number">
+    <br><br>
+    Em quantos vocês estão?
+    <br><br>
+    <input id = "input_quantidade" type = "number">
+    <br><br>
+    <button onclick = "calculo()">Calcular</button>
+
+</body>
+</html>
+
+<script>
+
+    function calculo(){
+
+        var valor = Number(input_valor.value);
+        var quant = Number(input_quantidade.value);
+        var salvo = Number(quant);
+        var total = valor / quant;
+
+        alert("Vocês estão em " + quant + ", Então, terão que pagar " + total + " cada.")
+
+    }
+
+</script>

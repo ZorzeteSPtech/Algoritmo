@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Números</title>
+</head>
+<body>
+    Insira o primeiro número:
+    <br><br>
+    <input id = "input_n1" type = "number">
+    <br><br>
+    Insira o segundo número:
+    <br><br>
+    <input id = "input_n2" type = "number">
+    <br><br>
+    <button onclick = "soma()">Somar</button>
+    <button onclick = "dif()">Diferença</button>
+    <button onclick = "prod()">Produto</button>
+    <button onclick = "razao()">Razão</button>
+</body>
+</html>
+
+<script>
+
+    function soma(){
+
+        var n1 = Number(input_n1.value);
+        var n2 = Number(input_n2.value);
+        var soma = n1 + n2;
+
+        alert("A soma entre " + n1 + " e de " + n2 + " é " + soma);
+
+    }
+
+    function dif(){
+
+        var n1 = Number(input_n1.value);
+        var n2 = Number(input_n2.value);
+        var dif = n1 - n2;
+
+        alert("A diferença entre " + n1 + " e de " + n2 + " é " + dif);
+
+    }
+
+    function prod(){
+
+        var n1 = Number(input_n1.value);
+        var n2 = Number(input_n2.value);
+        var prod = n1 * n2;
+
+        alert("O produto entre " + n1 + " e de " + n2 + " é " + prod);
+
+    } 
+
+    function razao(){
+
+        var n1 = Number(input_n1.value);
+        var n2 = Number(input_n2.value);
+        var razao = n1 / n2;
+
+        alert("A razão entre " + n1 + " e de " + n2 + " é " + razao);
+
+    }
+
+</script>

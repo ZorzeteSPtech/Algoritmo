@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Votos</title>
+</head>
+<body>
+    Quantos votos teve o primeiro candidato?
+    <br><br>
+    <input type="number" id="input_v1">
+    <br><br>
+    Quantos votos teve o segundo candidato?
+    <br><br>
+    <input type="number" id="input_v2">
+    <br><br>
+    Quantos votos em brancos tiveram?
+    <br><br>
+    <input type="number" id="input_vb">
+    <br><br>
+    Quantos votos nulos tiveram?
+    <br><br>
+    <input type="number" id="input_null">
+
+    <button onclick = "resultador()">Resultado da Eleição</button>
+
+    <div id="div_votos">Olha ai</div>
+</body>
+</html>
+
+
+<script>
+
+    function resultador(){
+
+        var v1 = Number(input_v1.value);
+        var v2 = Number(input_v2.value);
+        var inv = Number(input_vb.value) + Number(input_null.value);
+        var total = v1 + v2 + inv; 
+        var div = total / 100;
+        
+        // porcentagens
+        var v1PC = v1 * div;
+        var v2PC = v2 * div;
+        var invPC = inv * div;
+
+    div_votos.innerHTML = 
+    `Total de votos: ${total}  
+
+    Candidato A: ${v1PC}% (${v1} votos)  
+
+    Candidato B: ${v2PC}% (${v2} votos)  
+
+    Inválidos: ${invPC}% (${inv} votos)  `
+
+    }
+
+</script>

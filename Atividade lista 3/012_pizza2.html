@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sabores</title>
+</head>
+<body>
+    Qual o sabor de sua pizza?
+    <br><br>
+    <input type="text" id="input_sabor">
+    <br><br>
+    Qual o valor da pizza?
+    <br><br>
+    <input type="number" id="input_valor">
+    <br><br>
+    Quantos amigos vão comer?
+    <br><br>
+    <input type="number" id="input_amigos">
+
+    <button onclick="valor()">Ver valor por amigo</button>
+
+    <div id="div_valor"></div>
+</body>
+</html>
+
+<script>
+
+    function valor(){
+
+        var sabor = input_sabor.value;
+        var amigos = Number(input_amigos.value);
+
+        var valor = Number(input_valor.value) * 1.1;
+
+        var div = valor / amigos;
+
+        div_valor.innerHTML = ` Cada amigo vai colaborar com R$${div} para a pizza de ${sabor}.`
+
+    }
+
+</script>

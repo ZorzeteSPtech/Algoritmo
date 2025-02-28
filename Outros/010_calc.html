@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+</head>
+<body>
+    Primeiro número:
+    <input id = "input_n1" type = "nunber">
+
+    <br><br>
+
+    Segundo número:
+    <input id = "input_n2" type = "nunber">
+
+    <br><br>
+
+    <button onclick = "multiplicar()">Multiplicar</button>
+    <button onclick = "divisao()">Dividir</button>
+    <button onclick = "subtrair()">Subtrair</button>
+    <button onclick = "soma()">Somar</button>
+</body>
+</html>
+
+<script>
+
+function multiplicar(){
+
+    var n1 = input_n1.value;
+    var n2 = input_n2.value;
+    var mult = n1 * n2;
+
+
+    alert("O número da sua multiplicação é " + mult);
+}
+
+function divisao(){
+    
+    var n1 = input_n1.value;
+    var n2 = input_n2.value;
+    var div = n1 / n2;
+
+    alert("O número da sua divisão é " + div);
+
+}
+
+function subtrair(){
+
+    var n1 = input_n1.value;
+    var n2 = input_n2.value;
+    var sub = n1 - n2;
+
+    alert("O número da sua subtração é " + sub); 
+    // Priorizar a soma com as (). Number é para converter String para Número
+
+}
+
+function soma(){
+
+    var n1 = Number(input_n1.value);
+    var n2 = Number(input_n2.value);
+    var soma = n1 + n2;
+
+    alert("O número da sua soma é " + soma);
+
+}
+
+</script>

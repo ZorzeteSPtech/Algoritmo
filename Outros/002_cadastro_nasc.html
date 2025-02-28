@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Local de Nascimento</title>
+</head>
+<body>
+    <p>Onde você nasceu?</p>
+    <input id = "input_CD" type = "text">
+    <br><br>
+    <input id = "input_data" type = "date">
+    <br><br>
+    <button onclick = "cadastro()"> Cadastrar </button>
+</body>
+</html>
+
+
+<script>
+
+    function cadastro(){
+
+        alert ("Você nasceu na " + input_CD.value + " e nasceu em " + input_data.value)
+
+    }
+
+</script>

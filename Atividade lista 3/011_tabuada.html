@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabuada</title>
+</head>
+<body>
+    Quer ver a tabuada de qual número?
+    <br><br>
+    <input type="number" id="input_num">
+    <button onclick="tabuada()">Ver Tabuada</button>
+
+    <div id="div_tabuada">A tabuada é...</div>
+</body>
+</html>
+
+
+<script>
+
+    function tabuada(){
+
+        var num = Number(input_num.value);
+        var tabuada = (num * 2) (num * 3) (num * 4) (num * 5) (num * 6) (num * 7) (num * 8) (num * 9);
+
+        div_tabuada.innerHTML = `Tentativa ${tabuada}`;
+
+    }
+
+</script>

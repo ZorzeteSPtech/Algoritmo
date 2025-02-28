@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Peso e Altura</title>
+</head>
+<body>
+    <p>Insira seu peso</p>
+    <input id = "input_peso" type = "number">
+    <p>Insira sua altura</p>
+    <input id = "input_altura" type = "number">
+    <button onclick = "fala_ai()">Fale comigo</button>
+</body>
+</html>
+
+
+<script>
+
+    function fala_ai(){
+
+        alert("Você pesa " + input_peso.value + "kg e tem " + input_altura.value + "m de altura")
+
+    }
+
+</script>

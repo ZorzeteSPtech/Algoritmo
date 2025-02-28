@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algoritmolândia</title>
+</head>
+<body>
+    Quantos KWh você consumiu este mês?
+    <br><br>
+    <input type="number" id="input_KWh">
+    <button onclick="calcLuz()">Calcular conta de luz</button>
+</body>
+</html>
+
+<script>
+
+function calcLuz(){
+    var luz = input_KWh.value;
+    var conta = luz * 0.85;
+    var desconto = conta * 0.1;
+
+    if(luz < 100){
+
+        desconto;
+
+    }
+
+    alert (`Você tem que pagar R$${conta} pela luz`);
+}
+
+</script>

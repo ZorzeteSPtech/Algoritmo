@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Idade</title>
+</head>
+<body>
+    Qual a sua idade?
+    <br><br>
+    <input type="number" id="input_idade">
+    <button onclick="idade()">Ir pra festa</button>
+</body>
+</html>
+
+<script>
+
+    function idade(){
+
+        var idade = input_idade.value;
+
+            if(idade >= 18){
+
+                alert("#partiuFesta");
+
+            }
+            if (idade < 18){
+
+                alert("Pedir permissão pro responsável");
+
+            }
+
+    }
+
+</script>

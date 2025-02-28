@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soninho mimimimimit</title>
+</head>
+<body>
+    Quantas horas de sono você dormiu?
+    <br><br>
+    <input type="number" id="input_horas">
+    <br><br>
+
+    <button onclick = "sono()">Calcular soninho</button>
+    <br><br>
+    <div id="div_sonos">Resultado</div>
+    
+</body>
+</html>
+
+<script>
+
+    function sono(){
+
+        var sono = input_horas.value;
+        var A = sono * 0.05;
+        var B = sono * 0.45;
+        var C = sono * 0.30;
+        var D = sono * 0.20;
+
+    div_sonos.innerHTML = 
+    `Ao dormir ${sono} horas, você dormiu:  
+
+    ${A} horas na fase 1 
+
+    ${B} horas na fase 2
+
+    ${C} horas na fase 3  
+
+    ${D} horas na fase REM`
+    }
+
+</script>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dragon Ball Z</title>
+</head>
+<body>
+    Qual seu nome grande guerreiro?
+    <br><br>
+    <input id = "input_nome" type = "text">
+    <br><br>
+    Qual o seu nível de "ki" normal?
+    <br><br>
+    <input id = "input_ki" type = "number">
+    <button onclick = "SuperSayan()">Ver "ki" em cada forma</button>
+</body>
+</html>
+
+<script>
+
+    function SuperSayan(){
+
+        var nome = input_nome.value;
+        var ki = Number(input_ki.value);
+        var qtdKi1 = ki * 50;
+        var qtdKi2 = ki * 100;
+
+        alert ("Wow guerreiro " + nome + " seu ki quando está em Super Sayajin 1 é de " + qtdKi1 + " mas que absurdo")
+        alert ("Mas o que? Você já pode se transformar no Super Sayajin 2 " + nome + "? Mas quanto poder, você tem " + qtdKi2 + " de ki nessa forma!!!")
+    }
+
+</script>
