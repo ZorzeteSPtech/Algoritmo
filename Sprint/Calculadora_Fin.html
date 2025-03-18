@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Financeira</title>
+</head>
+<body>
+    Espécie abelha
+    <input type="text" id="input_esp">
+    <br><br>
+    Quantidade de Colmeias
+    <input type="nmber" id="input_colmeias">
+    <br><br>
+    Quantidade de Abelhas
+    <input type="number" id="input_qtd">
+    <br><br>
+    Produção de mel
+    <input type="number" id="input_mel">
+    <br><br>
+    Valor do mel
+    <input type="number" id="input_val">
+    <br><br>
+    <button onclick="calc()">Calcular</button>
+    <div id="div_msg"></div>
+</body>
+</html>
+
+<script>
+
+    function calc(){
+
+        var esp = input_esp.value;
+        var qtd = input_qtd.value;
+        var mel = input_mel.value;
+        var val = input_val.value;
+
+        
+        //20kg por ano / média
+        //Perda de 60%
+
+        //https://www.infobeebr.com.br/noticias/clima-instavel-desorienta-abelhas-e-afeta-producao-de-mel-no-pais/
+
+        div_msg.innerHTML = `A quantidade de MEL que as suas ABEIAS da especie ESP produzem, da úm total de VALOR_PERDA sem os sensores mas
+        aumenta em AUMENTO caso tenha um devido cuidado com a colmeia.`
+    }
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
