@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bilhete único</title>
+</head>
+<body>
+    Tipo de passageiro:
+    <select id="select_tipo">
+
+        <option value="1">Comum</option>
+        <option value="2">Estudante</option>
+        <option value="3">Idoso/PNE</option>
+        
+    </select>
+    <br><br>
+    Tipo de passagem:
+    <select id="select_passagem">
+
+        <option value="1">Passagem única</option>
+        <option value="2">Passagem integração</option>
+
+    </select>
+    <br><br>
+    <button onclick="verificar()">Simular preço</button>
+    <div id="div_msg"></div>
+</body>
+</html>
+
+<script>
+
+    function verificar(){
+
+        var tipo = select_tipo.value;
+        var pass = select_passagem.value;
+
+        var preco1 = 4.4;
+        var preco2 = 5.9;
+
+        if((tipo == "2" || tipo == "3")){
+
+            if (pass == "1" && tipo == "2"){
+
+                preco1 = 4.4 * (4.4 * 0.5);
+                div_msg.innerHTML = `${preco1}`
+
+            }else{
+
+                preco1 = 0;
+                preco2 = 0
+                div_msg.innerHTML = `${preco1}`;
+
+            }
+
+        }else{
+
+
+
+        }
+
+
+    }
+
+</script>

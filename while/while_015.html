@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elefantes Bacanas</title>
+</head>
+<body>
+    <h1>Sofrimento da Médium</h1>
+
+    Quantos elefantes você quer?
+    <input type="number" id="input_ele">
+    <br><br>
+    <button onclick="incomodar()">Atazanar Médium</button>
+    <br>
+    <div id="div_msg"></div>
+</body>
+</html>
+
+<script>
+
+    function incomodar(){
+
+        var efelante = input_ele.value;
+
+        var cont = 2;
+
+        var frase = "1 elefante incomoda muita gente!";
+
+        var msg = ``;
+
+        var elefante = "incomodam, ";
+
+
+        if (efelante == 1){
+
+            msg = `${frase}`;
+
+        }
+
+        while(cont <= efelante){
+
+            elefante += "incomodam, ";
+
+            msg += `${frase}<br> ${cont} elefantes, ${elefante}  muito mais!<br>`
+            cont++;
+        }
+
+    div_msg.innerHTML = msg;
+
+    }
+
+</script>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Limite vel</title>
+</head>
+<body>
+    <h2>Será que você ultrapassou a velocidade?</h2>
+
+    Insira velocidade:
+    <input type="number" id="input_vel">km/h
+    <br><br>
+    Insira limite de velocidade:
+    <input type="number" id="input_velL">km/h
+
+    <button onclick="calc()">Verificar</button>
+    <div id="div_msg"></div>
+
+</body>
+</html>
+
+<script>
+
+    function calc(){
+
+        var vel = Number(input_vel.value);
+        var velL = Number(input_velL.value);
+
+        var velLimite = vel * 1.2;
+
+        if (vel < velL){
+
+            div_msg.innerHTML = `<b>Velocidade dentro do limite. Boa direção!</b>`;
+
+            
+        }else if(vel < velLimite){
+
+        div_msg.innerHTML = `<b>Atenção. Excedendo limite de velocidade</b>`;
+
+         }else{
+
+        div_msg.innerHTML = `<b> Multa grave, velocidade muito acima do limite!</b>`;
+
+         } 
+
+
+    }
+
+
+    
+
+</script>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mentes Brilhantes</title>
+</head>
+<body>
+    Nota ENEM:
+    <input type="number" id="input_n1">
+    <br><br>
+    Vestibular interno:
+    <input type="number" id="input_n2">
+    <br><br>
+    <button onclick="calc()">Avaliação</button>
+</body>
+</html>
+
+<script>
+
+    function calc(){
+
+        var enem = Number(input_n1.value);
+        var inte = Number(input_n2.value);
+
+        if (enem >= 800 || inte >= 700){
+
+            alert(`Parábens, aprovado`);
+
+        }else{
+
+            alert(`Reprovado`);
+
+        }
+
+    }
+
+</script>

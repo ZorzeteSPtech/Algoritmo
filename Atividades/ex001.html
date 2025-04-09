@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agostinho Taxista</title>
+</head>
+<body>
+
+    <h2>Super Calculadora</h2>
+
+    Nome passageiro:
+    <input type="text" id="input_nome">
+    <br><br>
+    Distância kM:
+    <input type="number" id="input_km">
+    <br><br>
+    Bandeira corrida:
+    <br>1 <br>2 <br>3
+    <br><br>
+    <input type="number" id="input_bnd">
+    <br><br>
+    Horário:
+    <input type="number" id="input_hora">
+    <br><br>
+    <button onclick="calc()">Calcular corrida</button>
+    <div id="div_msg"></div>
+</body>
+</html>
+
+<script>
+
+function calc(){
+
+    var n = input_nome.value;
+    var km = Number(input_km.value);
+    var bnd = Number(input_bnd.value);
+    var hr = Number(input_hora.value);
+
+    var preco = km * 1.25;
+
+ if (hr < 0){
+
+    div_msg.innerHTML = `Valor inválido`;
+
+ }else if (hr > 23){
+
+    div_msg.innerHTML = `Valor inválido, muito alto`;
+
+ }else{   
+
+    if (bnd == 1){
+
+
+        if (hr < 6){
+
+            preco = preco * 1.05;
+
+        div_msg.innerHTML = `Olá ${n} Sua corrida, será na bandeira ${bnd}, percorrerá ${km} km e o total da corrida será de ${preco}`;
+
+        }else if (hr < 12){
+
+            preco = preco * 1.1;
+
+        div_msg.innerHTML = `Olá ${n} Sua corrida, será na bandeira ${bnd}, percorrerá ${km} km e o total da corrida será de ${preco}`;
+
+        }else{
+
+            preco = preco * 1.15;
+
+        div_msg.innerHTML = `Olá ${n} Sua corrida, será na bandeira ${bnd}, percorrerá ${km} km e o total da corrida será de ${preco}`;
+
+        }
+
+        }else if (bnd == 2){
+
+        if (hr < 6){
+
+            preco = preco * 1.1;
+
+        div_msg.innerHTML = `Olá ${n} Sua corrida, será na bandeira ${bnd}, percorrerá ${km} km e o total da corrida será de ${preco}`;
+
+        }else if (hr < 12){
+
+            preco = preco * 1.2;
+
+        div_msg.innerHTML = `Olá ${n} Sua corrida, será na bandeira ${bnd}, percorrerá ${km} km e o total da corrida será de ${preco}`;
+
+        }else{
+
+            preco = preco * 1.3;
+
+        div_msg.innerHTML = `Olá ${n} Sua corrida, será na bandeira ${bnd}, percorrerá ${km} km e o total da corrida será de ${preco}`;
+
+        }
+
+    }else if(bnd == 3){
+
+        if (hr < 6){
+
+            preco = preco * 1.15;
+
+        div_msg.innerHTML = `Olá ${n} Sua corrida, será na bandeira ${bnd}, percorrerá ${km} km e o total da corrida será de ${preco}`;
+
+        }else if (hr < 12){
+
+            preco = preco * 1.3;
+
+        div_msg.innerHTML = `Olá ${n} Sua corrida, será na bandeira ${bnd}, percorrerá ${km} km e o total da corrida será de ${preco}`;
+
+        }else{
+
+            preco = preco * 1.45;
+
+        div_msg.innerHTML = `Olá ${n} Sua corrida, será na bandeira ${bnd}, percorrerá ${km} km e o total da corrida será de ${preco}`;
+
+            }
+
+    }else{
+
+        div_msg.innerHTML = `Valor de bandeira inválido`;
+
+    }
+ }
+}
+</script>

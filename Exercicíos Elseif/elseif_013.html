@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon</title>
+</head>
+<body>
+    <h2>Pokemon</h2>
+
+    Qual é o seu pokemon?
+    <input type="text" id="input_pokemao">
+    <br><br>
+
+    <button onclick="ver()">Escolher Pokemon</button>
+    <div id="div_msg"></div>
+</body>
+</html>
+
+<script>
+
+function ver(){
+    var poke = input_pokemao.value;
+
+    if(poke == "Bulbassauro"){
+
+        div_msg.innerHTML = `<img src = "https://img-estoquenow.s3.amazonaws.com/items/1049/bulbasaur-pokemon---pelucia_a2ea9036cc538b1681ffcb7fbad1fc03.jpg">`
+    
+    }else if (poke == "Charmander"){
+
+        div_msg.innerHTML = `<img src ="https://pm1.aminoapps.com/8522/3f3756b1aff9e2b8ede27acd4eb743b1c3791c6ar1-1000-1000v2_uhq.jpg">`
+
+    }else if(poke == "Squirtle"){
+
+        div_msg.innerHTML = `<img src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqcdL3csJP_xc1rLCTQ8l94VTPJZtJWH7Bcw&s">`
+
+    }
+    
+}
+
+
+</script>

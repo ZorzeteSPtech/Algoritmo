@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Economia</title>
+</head>
+<body>
+    Qual é sua meta:
+    <input type="number" id="input_m">R$
+    <br><br>
+    Quanto tem guardado:
+    <input type="number" id="input_g">R$
+    <br><br>
+    <button onclick="calc()">Analisar Economia</button>
+    <div id="div_msg"></div>
+</body>
+</html>
+
+<script>
+
+    function calc(){
+
+        var meta = Number(input_m.value);
+        var guar = Number(input_g.value);
+
+        if (meta <= guar){
+
+            div_msg.innerHTML = `Parábens, meta alcançada`;
+            if (meta < guar){
+                guar = guar - meta;
+                div_msg.innerHTML += `<br>Meta ultrapassada em ${guar}`;
+
+            }
+        }else{
+
+            guar = meta - guar;
+            div_msg.innerHTML = `Força, ainda em busca da meta, faltam ${guar}`;
+
+        }
+
+
+
+    }
+
+</script>

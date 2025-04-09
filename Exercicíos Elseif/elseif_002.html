@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classe social em Tuvalu</title>
+</head>
+<body>
+    Insira renda familiar mensal
+    <input type="number" id="input_renda">R$
+    <button onclick="calc()">Ver renda mensal</button>
+    <div id="div_msg"></div>
+</body>
+</html>
+
+<script>
+
+    function calc(){
+
+        var r = Number(input_renda.value);
+
+
+        if(r <= 250){
+
+            div_msg.innerHTML = `Classe E`;
+
+        }else if(r <= 900){
+        
+            div_msg.innerHTML = `Classe D`;
+
+        }else if(r <= 2500){
+        
+            div_msg.innerHTML = `Classe C`;
+        
+        }else if( r <= 9500){
+
+            div_msg.innerHTML = `Classe B`;
+
+        }else{
+
+            div_msg.innerHTML = `Classe A`;
+
+        }
+
+    }
+
+</script>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Times Paulistas</title>
+</head>
+<body>
+    Qual time você torce?<br>
+    °Corinthians<br>
+    °Palmeiras<br>
+    °São Paulo<br>
+    °Santos
+    <input type="text" id="input_time">
+    <button onclick="analisar()">Fale sobre esse time</button>
+    <div id="div_msg"></div>
+</body>
+</html>
+
+<script>
+
+    function analisar(){
+
+        var t = input_time.value;
+        var s1 = 'style = "background-color:black; color:white;"';
+        var s2 = 'style = "background-color:green; color:white;"';
+        var s3 = 'style = "background-color:black; color:red;"';
+
+        if(t == "Corinthians"){
+
+            div_msg.innerHTML = `<p ${s1}>Salve o Corinthians</p>`;
+
+        }else if (t == "Palmeiras"){
+        
+            div_msg.innerHTML = `<p ${s2}>Salve o alviverde imponente</p>`;
+
+        }else if (t == "Santos"){
+
+            div_msg.innerHTML = `<p>Agora quem dá a bola é o Santos</p>`;
+
+        }else if (t == "São Paulo"){
+
+            div_msg.innerHTML = `<p ${s3}>Salve o tricolor Paulista</p>`;
+
+        }
+
+    }
+
+</script>

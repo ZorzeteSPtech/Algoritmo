@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calorias</title>
+</head>
+<body>
+    Quantos pãos por dia:
+    <input type="number" id="input_p">
+    <br><br>
+    Quantas bolachas recheadas por dia:
+    <input type="number" id="input_b">
+    <br><br>
+    Quantos achocolatados por dia:
+    <input type="number" id="input_a">
+    <button onclick="calc()">Verificar Calorias</button>
+
+    <div id="div_msg"></div>
+</body>
+</html>
+
+<script>
+
+    function calc(){
+
+        var p = Number(input_p.value);
+        var b = Number(input_b.value);
+        var a = Number(input_a.value);
+
+        var cal = (p * 50) + (b * 80) + (a * 70);
+
+
+        if (cal <= 200){
+
+            div_msg.innerHTML = `Parábens, vai ficar em forma`;
+
+        }else if (cal <= 400){
+
+            div_msg.innerHTML = `Cuidado, não vai ficar saúdavel`;
+
+        }else{
+
+            div_msg.innerHTML = `Acima do peso!! Alerta crítico`;
+
+        }
+
+    }
+
+</script>

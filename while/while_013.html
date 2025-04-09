@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tri</title>
+</head>
+<body>
+    <h1>Intervalo entre os números</h1>
+
+    Menor número:
+    <input type="number" id="input_min">
+    <br><br>
+    Maior número:
+    <input type="number" id="input_max">
+    <br><br>
+    <button onclick="curto()">Curto 3 e 5!</button>
+    <br>
+    <div id="div_msg"></div>
+</body>
+</html>
+
+<script>
+
+    function curto(){
+
+        var min = Number(input_min.value);
+        var max = Number(input_max.value);
+
+        var cont = min;
+
+        var tri = "É TRI!";
+        var pen = "É PENTA!";
+
+        var msg = "";
+
+        if (min > 0 && max < 100){
+
+            while(cont <= max){
+
+                if(cont % 3 == 0){
+                        
+                        msg += `${tri} <br>`;
+                        
+                }else if(cont % 5 == 0){
+
+                        msg += `${pen} <br>`;
+
+                }else{
+
+                        msg += `${cont} <br>`;
+
+                }
+                
+                cont++;
+            
+            }
+        }else{
+
+            alert("Oloko");
+
+        }
+
+        div_msg.innerHTML = msg;
+
+    }
+
+</script>

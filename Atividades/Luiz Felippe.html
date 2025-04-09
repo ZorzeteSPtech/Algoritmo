@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio do Luiz Felippe</title>
+</head>
+<body>
+    Insira seu nome:
+    <br><br>
+    <input type="text" id="input_nome">
+    <br><br>
+    Insira sua idade:
+    <br><br>
+    <input type="number" id="input_idade">
+    <br><br>
+    Valor a ser investido:
+    <br><br>
+    <input type="number" id="input_val">
+    <br><br>
+    Anos Investidos
+    <br><br>
+    <input type="number" id="input_anos">
+    <br><br>
+    <button onclick="calc()">Calcular</button>
+    <div id="div_msg"></div>
+</body>
+</html>
+
+<script>
+
+function calc(){
+
+    var n = input_nome.value;
+    var i = Number(input_idade.value);
+    var valBruto = Number(input_val.value);
+    var ano = Number(input_anos.value);
+    var taxaBanco = 0;
+    var taxaJuros = 0;
+    var fundo = "";
+
+            if (i < 18) { 
+                taxaBanco = 0.05;
+                
+                    if (valBruto >= 500) {
+                        taxaJuros = 0.095; 
+                        fundo = "SP900";
+                    } if (valBruto >= 100) {
+                        taxaJuros = 0.089; 
+                        fundo = "SP850";
+                    } else {
+                        taxaJuros = 0.08;
+                        fundo = "SP800";
+                }
+            } else { 
+                taxaBanco = 0.07;
+
+                    if (valBruto >= 5000) {
+                        taxaJuros = 0.13;
+                        fundo = "SP9000";
+                    } if (valBruto >= 1000) {
+                        taxaJuros = 0.12; 
+                        fundo = "SP8500";
+                    } else {
+                        taxaJuros = 0.11; 
+                        fundo = "SP8000";
+                    }
+                }
+
+      
+    var valFinal = valBruto * (taxaJuros * ano);
+    var comissaoBanco = (valFinal - valBruto) * taxaBanco;
+    var valLiquido = valFinal - comissaoBanco;
+
+div_msg.innerHTML = `
+    Olá, ${n}, este é o seu resumo financeiro:<br>
+    Fundo: ${fundo}<br>
+    Seu valor investido: R$ ${valBruto}<br>
+    Rendimentos líquidos: R$ ${valLiquido}<br>
+    Comissão do banco: R$ ${comissaoBanco} (${(taxaBanco * 100)}%)<br>
+            `;
+        }
+    </script>

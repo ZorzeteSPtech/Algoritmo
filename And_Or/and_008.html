@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificação de duas etapas</title>
+</head>
+<body>
+    Login:
+    <input type="text" id="input_log">
+    <br><br>
+    Senha:
+    <input type="password" id="input_senha">
+    <br><br>
+    Código de segurança:
+    <input type="text" id="input_cs">
+    <br><br>
+    <button onclick="entrar()">Entrar</button>
+</body>
+</html>
+
+<script>
+
+    function entrar(){
+
+        var log = input_log.value;
+        var senha = input_senha.value;
+        var seg = input_cs.value;
+
+        if (log == "SPTech" && senha == "digital" && seg == "123"){
+
+            alert(`Usuário autentificado com sucesso!`);
+
+        }else{
+
+            alert(`Falha na autentificação`);
+
+        }
+
+    }
+
+</script>

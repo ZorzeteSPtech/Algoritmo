@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notas e Frequência</title>
+</head>
+<body>
+    Nota aluno:
+    <input type="number" id="input_n1">
+    <br><br>
+    Frequência aluno:
+    <input type="number" id="input_freq">
+    <br><br>
+    <button onclick="avaliar()">Avaliar aluno</button>
+</body>
+</html>
+
+<script>
+
+    function avaliar(){
+
+        var n1 = Number(input_n1.value);
+        var freq = Number(input_freq.value);
+
+        if (n1 >= 6 && freq >= 75){
+
+            alert('Parábens! Aprovado');
+
+        }else{
+
+            alert(`Reprovado`);
+
+        }
+
+    }
+
+</script>

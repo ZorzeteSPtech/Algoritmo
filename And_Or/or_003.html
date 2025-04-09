@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Covid 19</title>
+</head>
+<body>
+    Renda Individual:
+    <input type="number" id="input_ri">R$
+    <br><br>
+    Renda Familiar:
+    <input type="number" id="input_rf">R$
+    <br><br>
+    <button onclick="avaliar()">Terei o beneficio</button>
+    <div id="div_msg"></div>
+</body>
+</html>
+
+<script>
+
+    function avaliar(){
+
+        var ri = Number(input_ri.value);
+        var rf = Number(input_rf.value);
+
+        if (ri <= 2000 || rf <= 3000){
+
+            div_msg.innerHTML = `Você terá o auxilio`;
+
+        }else{
+
+            div_msg.innerHTML = `Sem direito a auxilio`;
+
+        }
+
+    }
+
+</script>

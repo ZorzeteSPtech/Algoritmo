@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Covid 19</title>
+</head>
+<body>
+    Renda:
+    <input type="number" id="input_renda">R$
+    <br><br>
+    Renda total da família:
+    <input type="number" id="input_rendaTotal">
+    <br><br>
+    <button onclick="verificar()">Verificar ajuda</button>
+</body>
+</html>
+
+<script>
+
+    function verificar(){
+
+        var r = Number(input_renda.value);
+        var rt = Number(input_rendaTotal.value);
+
+        if (r <= 1050 && rt <= 2100){
+
+            alert(`Você tem direito`);
+
+        }else{
+
+            alert(`Você NÃO tem direito`);
+
+        }
+
+    }
+
+</script>

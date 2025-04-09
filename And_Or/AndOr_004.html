@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parque</title>
+</head>
+<body>
+    Login:
+        <input type="text" id="input_login">
+    <br><br>
+    Senha:
+        <input type="text" id="input_senha">
+    <br><br>
+    Info. Pessoal:
+        <input type="text" id="input_pesso">
+    <br><br>
+    <button onclick="autentificar()">Autentificar</button>
+    <div id="div_msg"></div>
+</body>
+</html>
+
+<script>
+
+    function autentificar(){
+
+        var l = input_login.value;
+        var s = input_senha.value;
+        var ip = input_pesso.value;
+
+            if ((l == "ana" && s == "braga") && (ip == "1949" || ip == "loro jose")){
+
+                div_msg.innerHTML = `Usuário autentificado`;
+
+            }else{
+
+                div_msg.innerHTML = `Falha na autentificação`;
+
+            }
+
+    }
+
+</script>

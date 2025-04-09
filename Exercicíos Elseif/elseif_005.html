@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aluno</title>
+</head>
+<body>
+    Insira sua nota:
+    <input type="number" id="input_nota">
+    <button onclick="calc()">Classificar Aluno</button>
+    <div id="div_msg"></div>
+</body>
+</html>
+
+<script>
+
+    function calc(){
+
+        var n = Number(input_nota.value);
+
+        if(n < 5){
+
+            alert(`Aluno precisa de ajuda!`);
+
+        }else if(n <= 7){
+        
+            alert(`Aluno na média`);
+
+        }else if(n <= 9.5){
+        
+            alert(`Aluno acima da média`);
+
+        }else if(n <= 10){
+        
+            alert(`Aluno fora da curva`);
+
+        }else{
+
+            alert(`Nota inválida`);
+
+        }
+
+    }
+
+</script>

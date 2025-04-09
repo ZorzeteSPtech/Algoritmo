@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peso infantil</title>
+</head>
+<body>
+    Peso do bebê:
+    <input type="number" id="input_peso">Kg
+    <button onclick="calc()">Pesar bebê</button>
+    <div id="div_msg"></div>
+</body>
+</html>
+
+<script>
+
+    function calc(){
+
+        var p = Number(input_peso.value);
+
+        if(p <= 13.5){
+
+            div_msg.innerHTML = `Abaixo do peso`;
+
+        }else if(p > 13.5){
+
+            if(p <= 21.2){
+                
+                if(p == 18.3){
+
+                div_msg.innerHTML = `Perfeito`;
+
+                }else{
+
+            div_msg.innerHTML = `Peso na média`;
+            }
+        }
+        
+        
+
+        else{
+
+            div_msg.innerHTML = `Acima do peso`;
+        }
+
+            }
+
+    }
+
+</script>

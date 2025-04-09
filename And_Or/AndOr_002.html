@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robervaldo</title>
+</head>
+<body>
+    Tamanho da tela do celular:
+    <input type="number" id="input_tela">
+    <br><br>
+    <select id="select_cor">
+
+        <option value="1">Preto</option>
+        <option value="2">Prata</option>
+        <option value="3">Azul</option>
+        <option value="4">Vermelho</option>
+
+    </select>
+    <br><br>
+    <button onclick="gosta()">Será que ele gosta?</button>
+
+    <div id="div_msg"></div>
+
+</body>
+</html>
+
+<script>
+
+    function gosta(){
+
+        var tela = Number(input_tela.value);
+        var cor = select_cor.value;
+
+        if (tela >= 6.5 && (cor == "1" || cor == "2")){
+
+            div_msg.innerHTML = `<img src = "https://media.istockphoto.com/id/157030584/vector/thumb-up-emoticon.jpg?s=612x612&w=0&k=20&c=GGl4NM_6_BzvJxLSl7uCDF4Vlo_zHGZVmmqOBIewgKg=">`;
+
+        }else{
+
+            div_msg.innerHTML = `<img src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREGW46yHGPAGClA1gMxcsMlvgqDgF0_qj0Tw&s">`;
+
+        }
+
+    }
+
+</script>

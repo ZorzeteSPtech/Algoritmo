@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contagem</title>
+</head>
+<body>
+    <button onclick="conta()">Contar</button>
+    <div id="div_msg"></div>
+</body>
+</html>
+
+<script>
+
+    function conta(){
+
+        var n = 0;
+
+        div_msg.innerHTML = "";
+
+        while (n < 15){
+
+            div_msg.innerHTML += `${n} <br>`;
+            n++;
+
+        }
+
+    }
+
+</script>

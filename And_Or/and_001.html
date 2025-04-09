@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperatura</title>
+</head>
+<body>
+    Temperatura Atual:
+        <input type="number" id="input_temp">
+        <br><br>
+        <button onclick="verificar()">Verificar</button>
+        <div id="div_msg"></div>    
+</body>
+</html>
+
+<script>
+
+function verificar(){
+
+    var temp = Number(input_temp.value);
+    
+    if (temp > 21 && temp < 24){
+
+        alert (`Temperatura Confortável`);
+
+    }else{
+
+        alert (`Temperatura Desconfortável`);       
+
+    }
+
+}
+</script>

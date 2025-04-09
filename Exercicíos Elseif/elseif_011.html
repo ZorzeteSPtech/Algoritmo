@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Umidade</title>
+</head>
+<body>
+    <h2>Umidade do Ambiente</h2>
+
+    Umidade atual ambiente:
+    <input type="number" id="input_umi">
+
+    <br><br>
+    <button onclick="calc()">Verificar umidade</button>
+    <div id="div_msg"></div>
+
+</body>
+</html>
+
+<script>
+
+function calc(){
+    
+    var umi = Number(input_umi.value);
+
+    if(umi > 0){
+
+        if(umi < 12){
+
+            div_msg.innerHTML = `Estado de Emergencia`;
+
+        }else if(umi < 20){
+
+            div_msg.innerHTML = `Estado de Alerta`;
+
+        }else if(umi < 30){
+        
+            div_msg.innerHTML = `Estado de Atenção`;
+        
+        }else if (umi > 100){
+
+            alert(`Valor inválido. Muito alto`);   
+
+        }else{
+
+            div_msg.innerHTML = `Nenhum risco`;
+
+        }
+
+    }else{
+
+        alert(`Valor inválido. Muito baixo`);
+
+    }
+
+}
+
+
+
+</script>
