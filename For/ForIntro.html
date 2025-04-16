@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For</title>
+</head>
+<body>
+    Inserir número de linhas:
+    <input type="number" id="input_linhas">
+    <br><br>
+    Inserir número de caracteres:
+    <input type="number" id="input_caractere">
+    <br><br>
+    <button onclick="contar()">Contar</button>
+    <div id="div_msg"></div>
+</body>
+</html>
+
+<script>
+
+    function contar(){
+
+        var msg = "";
+
+        var qtdLinha = Number(input_linhas.value);
+        var qtdCaractere = Number(input_caractere.value);
+
+        for(var linha = 1; linha <= qtdLinha; linha++){
+
+        var frase = "";
+
+            for(var caract = 1; caract <= qtdCaractere; caract++){
+
+                msg += `${linha}`;
+
+            }
+            msg += `${frase} <br>`;
+        }
+    div_msg.innerHTML = msg;
+
+
+        // for(var cont = 0; cont < 10; cont++){
+
+        //     msg += `${cont} <br>`
+
+        // }
+    
+        
+
+    }
+
+</script>

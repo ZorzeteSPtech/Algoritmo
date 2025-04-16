@@ -9,6 +9,45 @@
     Dias que você faz musculação:
         <input type="number" id="input_dias">
     <br><br>
-    button[]
+    <button onclick="musculo()">Exibir rotina mensal</button>
+    <br>
+    <div id="div_msg"></div>
 </body>
 </html>
+
+<script>
+
+    function musculo(){
+
+        var d = Number(input_dias.value);
+
+        var cont = 1;
+        var msg = "";
+
+        var rand = "Comer, dormir, etc";
+        var musc = "Musculação";
+        var dText = "Dia "
+
+        while(cont <= 30){
+
+
+                if(cont % d == 1){
+                    {
+
+                        msg += `${dText} ${cont} - ${musc} <br>`;
+                    
+                    }
+
+                }else{
+
+                    msg += `${dText} ${cont} - ${rand}<br>`;
+
+                }
+
+            cont++;
+
+        }
+    div_msg.innerHTML = msg;
+    }
+
+</script>

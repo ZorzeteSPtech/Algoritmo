@@ -7,10 +7,10 @@
 </head>
 <body>
     Número:
-        <input type="number" id="input_n">
+        <input type="number" id="input_num">
     <br><br>
     Frase:
-        <input type="text" id="input_f">
+        <input type="text" id="input_frase">
     <br><br>
     <button onclick="paraguai()">Papagaio</button>
     <div id="div_msg"></div>
@@ -21,22 +21,26 @@
 
     function paraguai(){
 
-        var n = Number(input_n.value);
-        var f = input_f.value;
-        var c = 0;
+        var num = Number(input_num.value);
+        var frase = input_frase.value;
 
-        while(c < n){
+        var cont = 1;
+        var cont2 = 0;
 
-            div_msg.innerHTML += `${c}`;
-            c++
-        }
+        while (cont < num){
 
-        c = 0;
+            frase2 = "";
 
-        while(c < n){
+            while(cont2 < num){
 
-            alert()
+            frase2 += `${frase}\n`;
+            cont2++;
 
+            }
+            
+            cont2 = 0;
+            alert(`${frase2}`);
+            cont++;
         }
 
     }

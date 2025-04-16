@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carona</title>
+</head>
+<body>
+    Número de pessoas no carro:
+        <input type="number" id="input_pesso">
+    <br><br>
+    Número de passageiros que cabem no carro:
+        <input type="number" id="input_carro">
+    <br><br>
+    <button onclick="partiu()">#Partiu Carona</button>
+    <br>
+    <div id="div_msg"></div>
+</body>
+</html>
+
+<script>
+
+    function partiu(){
+
+        var pesso = Number(input_pesso.value);
+        var carro = Number(input_carro.value);
+
+        var msg = "Entrou o 1º passageiro (que é o(a) motorista) <br>";
+
+        var textI = "Entrou o ";
+        var textF = "passageiro";
+        var textR = "passageiro terá que esperar <br>";
+
+        for (var cont = 2; cont <= pesso; cont++){
+
+            if(cont <= carro){
+
+                msg += `${textI} ${cont}° ${textF}<br>`;
+
+            }else{
+
+                msg += `O ${cont}° ${textR}`;
+
+            }
+
+        }
+
+    div_msg.innerHTML = msg;
+
+    }   
+
+</script>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poupança</title>
+</head>
+<body>
+    Quantidade de depósitos:
+        <input type="number" id="input_qtdDepo">
+    <br><br>
+    Depósito mensal:
+        <input type="number" id="input_grana">R$
+    <br><br>
+    <button onclick="deposito()">Acompanhar grana</button>
+    <br>
+    <div id="div_msg"></div>
+</body>
+</html>
+
+<script>
+
+    function deposito(){
+
+        var qtdDepo = Number(input_qtdDepo.value);
+        var grana = Number(input_grana.value);
+        var granaI = grana;
+
+        var msg = "";
+
+        for (var cont = 1; cont <= qtdDepo; cont++){
+
+            msg += `${cont}° Mês R$${grana}.00 <br>`;
+            grana += granaI;
+
+        }
+    
+    div_msg.innerHTML = msg;
+
+    }
+
+</script>

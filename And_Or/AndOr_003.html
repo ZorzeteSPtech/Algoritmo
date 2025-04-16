@@ -38,26 +38,31 @@
         var preco1 = 4.4;
         var preco2 = 5.9;
 
-        if((tipo == "2" || tipo == "3")){
 
-            if (pass == "1" && tipo == "2"){
+        if(tipo == 2 || tipo == 3){
 
-                preco1 = 4.4 * (4.4 * 0.5);
-                div_msg.innerHTML = `${preco1}`
+            if(tipo == 2){
+
+                preco1 = preco1 / 2;
+                preco2 = preco2 / 2;
 
             }else{
 
                 preco1 = 0;
-                preco2 = 0
-                div_msg.innerHTML = `${preco1}`;
+                preco2 = 0;
 
             }
 
-        }else{
-
-
-
         }
+                if(pass == 1){
+
+                    div_msg.innerHTML = preco1; 
+
+                }else{
+
+                    div_msg.innerHTML = preco2;
+
+                }
 
 
     }

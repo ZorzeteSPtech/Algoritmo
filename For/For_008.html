@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FizzBuzz</title>
+</head>
+<body>
+    Valor mínimo:
+        <input type="number" id="input_min">
+    <br><br>
+    Valor máximo:
+        <input type="number" id="input_max">
+    <br><br>
+    <button onclick="Wow()">Ver múltiplos</button>
+    <br>
+    <div id="div_msg"></div>
+</body>
+</html>
+
+<script>
+
+    function Wow(){
+
+        var min = Number(input_min.value);
+        var max = Number(input_max.value);
+
+        var msg = "";
+
+        var txt1 = "Fizz";
+        var txt2 = "Buzz";
+        var txt3 = "FizzBuzz";
+
+        if (min > 0 && min < max){
+
+            for (var cont = min; cont <= max; cont++){
+
+            var tri = cont % 3;
+            var pen = cont % 5;
+
+
+                if(tri == 0 && pen == 0){
+
+                    msg += `${txt3} <br>`;
+
+                }else if(tri == 0){
+
+                    msg += `${txt1} <br>`;
+
+                }else if(pen == 0){
+
+                    msg += `${txt2} <br>`;
+
+                }else{
+
+                    msg += `${cont} <br>`;
+
+                }
+
+            }
+            div_msg.innerHTML = msg;
+        }
+
+    }
+
+</script>

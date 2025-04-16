@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desempenho</title>
+</head>
+<body>
+    Nota aluno:
+        <input type="number" id="input_nota">
+    <br><br>
+    Frequência aluno:
+        <input type="number" id="input_freq">
+    <br><br>
+    <button onclick="analisa()">Analisar aluno</button>
+    <br><br>
+    <div id="div_msg"></div>
+</body>
+</html>
+
+<script>
+
+    function analisa(){
+
+        var nota = Number(input_nota.value);
+        var freq = Number(input_freq.value);
+
+        if((nota > 0 && nota < 10) || (freq > 0 && freq < 100)){
+
+        if(freq > 75){
+
+            if(nota < 6){
+
+                alert(`Abaixo da média`);
+
+            }else if(nota >= 6 && nota <= 8){
+
+                alert(`Ficou na média`);
+
+            }else{
+
+                alert(`Aluno acima da média`);
+
+            }
+
+            alert(`Aluno aprovado por frequência`);
+        
+        }else{
+
+            alert(`Aluno reprovado por falta`);
+
+        }
+
+
+        }else if (nota < 0 || nota > 10){
+
+            alert(`Nota inválida`);
+
+        }else{
+
+            alert(`Frequência inválida`);
+
+        }
+
+    }
+    
+</script>
