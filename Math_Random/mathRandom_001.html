@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="sorte()">Sortear</button>
+    <br><br>
+    <div id="div_msg"></div>
+</body>
+</html>
+
+<script>
+
+    function sorte(){
+
+        var msg = "";
+
+        msg = Math.random() * 1;
+
+        if (msg < 0.5){
+
+            msg = 0;
+            msg += "<br>Eu arredondei pra 0";
+
+        }else{
+
+            msg = 1;
+            msg += "<br>Eu arredondei pra 1";
+
+        }
+
+        div_msg.innerHTML = msg;
+
+    }
+
+</script>
