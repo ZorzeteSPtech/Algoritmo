@@ -6,7 +6,29 @@
     <title>Tabuada</title>
 </head>
 <body>
-    
+    tabuada de 2 a 9
+    <br>
+    <select id="select_tabuada">
+
+        <option value="#">Selecione um número</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+
+    </select>
+    <br><br>
+    Até qual número?
+    <br>
+    <input type="number" id="input_num">
+    <br><br>
+    <button onclick="ver()">Ver tabuada</button>
+    <br><br>
+    <div id="div_msg"></div>
 </body>
 </html>
 
@@ -14,17 +36,31 @@
 
     function ver(){
 
-        var tabu = Number(input_tabu.value);
-        var num = Number(x)
+        var tabuada = Number(select_tabuada.value);
+        var num = Number(input_num.value);
 
         var c = 0;
+        var msg = "";
 
-        while (c < tabu){
+        while (c < num){
 
-            c++
+            var conta = tabuada * c;
+
+        if(conta % 2 == 0){
+
+            c++;
+            msg += `<span style="color:blue;">${tabuada} X ${c} = ${conta} </span><br>`;
+
+        }else{
+
+            c++;
+            msg += `<span style="color:red; ">${tabuada} X ${c} = ${conta} </span><br>`;
 
         }
 
+        div_msg.innerHTML = msg;
+
     }
+}
 
 </script>

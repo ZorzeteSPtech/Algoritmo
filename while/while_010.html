@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corrida</title>
+</head>
+<body>
+    Quantas voltas:
+        <input type="number" id="input_voltas">
+    <br><br>
+    <button onclick="iniciar()">Iniciar corrida</button>
+    <br><br>
+    <div id="div_msg"></div>
+</body>
+</html>
+
+<script>
+
+    function iniciar(){
+
+        var voltas = Number(input_voltas.value);
+        var msg = "";
+        var c = 0;
+
+
+        while (c < voltas){
+
+            c++
+            var frase = `Carro dando a ${c}° volta <br>`;
+
+            msg += `${frase}`;
+
+        }
+
+        div_msg.innerHTML = msg;
+
+    }
+
+</script>

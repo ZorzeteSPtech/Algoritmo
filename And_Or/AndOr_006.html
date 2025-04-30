@@ -25,11 +25,11 @@
         var nota = Number(input_nota.value);
         var freq = Number(input_freq.value);
 
-        if((nota > 0 && nota < 10) || (freq > 0 && freq < 100)){
+        if((nota > 0 && nota < 10) && (freq > 0 && freq < 100)){
 
         if(freq > 75){
 
-            if(nota < 6){
+            if(nota <= 6){
 
                 alert(`Abaixo da média`);
 
