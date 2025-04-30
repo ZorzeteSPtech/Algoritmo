@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coca-colas</title>
+    <title>Café com leite</title>
 </head>
 <body>
-    Coca-colas já bebidas:
-        <input type="number" id="input_cocas">
+    Quantos café com leite na vida?
+        <input type="number" id="input_cafeLeite">
     <br><br>
     <button onclick="ver()">Ver a quantidade</button>
     <br><br>
@@ -19,12 +19,15 @@
 
     function ver(){
 
-        var cocas = Number(input_cocas.value);
+        var cafeLeite = Number(input_cafeLeite.value);
+        var leite = cafeLeite;
+        var cafe = cafeLeite * 2;
+
         var msg = "";
 
-        for (c = 0; c < cocas; c++){
+        for (c = 0; c < cafeLeite; c++){
 
-            msg += `🥤`;
+            msg += `${leite}, ${cafe}<br>`;
 
         }
 
