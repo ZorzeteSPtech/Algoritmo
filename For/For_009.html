@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Idade</title>
+</head>
+<body>
+    Insira idade:
+        <input type="number" id="input_idade" onkeyup="calc()">
+    <br><br>
+    <div id="div_msg"></div>
+    
+</body>
+</html>
+
+<script>
+
+    function calc(){
+
+        var idade = Number(input_idade.value);
+        var msg = "";
+
+        var txt1 = "Primeira Infância";
+        var txt2 = "Pré-escolar";
+        var txt3 = "Segunda Infância";
+        var txt4 = "Adolescência";
+        var txt5 = "Adulto";
+        var txt6 = "Melhor idade";
+        var txt7 = "Matusalém";
+        
+
+        for(cont = 0; cont <= idade; cont++){
+
+            if(cont <= 4){
+
+                msg += `${cont} anos ${txt1}<br>`
+
+            }else if(cont <= 6){
+
+                msg += `${cont} anos ${txt2}<br>`
+
+            
+            }else if(cont <= 10){
+
+                msg += `${cont} anos ${txt3}<br>`
+
+            
+            }else if(cont <= 18){
+
+                msg += `${cont} anos ${txt4}<br>`
+
+            
+            }else if(cont <= 50){
+
+                msg += `${cont} anos ${txt5}<br>`
+
+            
+            }else if(cont <= 100){
+
+                msg += `${cont} anos ${txt6}<br>`
+
+            
+            }else{
+
+                msg += `${cont} anos ${txt7}<br>`
+
+            }
+
+        }
+
+        div_msg.innerHTML = msg;
+
+    }
+
+</script>

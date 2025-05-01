@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sortear</title>
+    <style>
+
+        img{
+
+            height:150px;
+
+        }
+
+    </style>
+</head>
+<body>
+    <button onclick="sorte()">Sortear Time</button>
+    <div id="div_msg"></div>
+</body>
+</html>
+
+<script>
+
+    function sorte(){
+
+        var santos = "<img src = https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Santos_Logo.png/250px-Santos_Logo.png>";
+        var saoPaulo = "<img src = https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Brasao_do_Sao_Paulo_Futebol_Clube.svg/250px-Brasao_do_Sao_Paulo_Futebol_Clube.svg.png>";
+        var palmeiras = "<img src = https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Palmeiras_logo.svg/250px-Palmeiras_logo.svg.png>";
+        var corintians = "<img src = https://upload.wikimedia.org/wikipedia/pt/thumb/1/19/CorintiansPP.png/250px-CorintiansPP.png>";
+
+        var aleatorio = Math.floor(Math.random() * 4 + 1);
+        var msg = "";
+    
+        if(aleatorio == 1){
+
+            msg = `${santos}`;
+
+        }else if(aleatorio == 2){
+
+            msg = `${saoPaulo}`;
+
+        }else if(aleatorio == 3){
+
+            msg = `${palmeiras}`;
+
+        }else{
+
+            msg = `${corintians}`;
+
+        }   
+
+        div_msg.innerHTML = msg;
+
+    }
+
+</script>

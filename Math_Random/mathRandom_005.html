@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jokenpo</title>
+    <style>
+
+        img{
+
+            height:200px;
+
+        }
+
+    </style>
+</head>
+<body>
+    <button onclick="jogar()">Jogar</button>
+    <br><br>
+    <div id="div_msg"></div>
+</body>
+</html>
+
+<script>
+
+var msgPontos1 = 0;
+var msgPontos2 = 0;
+
+    function jogar(){
+
+        var msg1 = "";
+        var msg2 = "";
+        var msg = "";
+        var pedra = "<img src = https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDLXzba8bemjSPTxAIjGF3b0gdnXtL_JrN8w&s>"
+        var papel = "<img src = https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSullX4sK6GThKBCO1fEawkBY9y_fSxWXdFgA&s>";
+        var tesoura = "<img src = https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpFpkqumErdD50Wftr7uaIyLxw7gTIGS1lmks6ai-m5_WKQ1v5zSwnz4cYySM0SThmc0Q&usqp=CAU>"
+
+        var player1 = Math.floor(Math.random() * 3 + 1)
+        var player2 = Math.floor(Math.random() * 3 + 1)
+
+        if (player1 == 1){
+
+            msg1 = `${pedra}<br>`;
+
+        }else if (player1 == 2){
+
+            msg1 = `${papel}<br>`;
+
+        }else{
+
+            msg1 = `${tesoura}<br>`;
+
+        }
+        
+        if (player2 == 1){
+
+            msg2 = `${pedra}<br>`;
+
+        }else if (player2 == 2){
+
+            msg2 = `${papel}<br>`;
+
+        }else{
+
+            msg2 = `${tesoura}<br>`;
+
+        }
+
+        if (
+            player1 == 1 && player2 == 3 ||
+            player1 == 2 && player2 == 1 ||
+            player1 == 3 && player2 == 2
+        ){
+
+            msgPontos1++;
+            msg = `<br><br>Player 1 venceu ${msgPontos1}`;
+
+        }else if (
+            player2 == 1 && player1 == 3 ||
+            player2 == 2 && player1 == 1 ||
+            player2 == 3 && player1 == 2
+        ){
+
+            msgPontos2++;
+            msg = `<br><br>Player 2 venceu ${msgPontos2}`
+
+        }else{
+
+            msg = `<br>Empate`;
+
+        }
+
+        div_msg.innerHTML = msg1 + msg2 + `${msg}`;
+
+    }
+
+</script>

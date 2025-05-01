@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dado</title>
+
+    <style>
+
+        #div_msg{
+
+            background: black;
+            height: 100px;
+            width: 100px;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+    </style>
+</head>
+<body>
+    <button onclick="dado()">Jogar dado</button>
+    <div id="div_msg"></div>
+</body>
+</html>
+
+<script>
+
+    function dado(){
+
+        var aleatorio = Math.floor(Math.random() * 20 + 1);
+
+        var msg = "";
+
+        msg = `${aleatorio}`;
+
+        div_msg.innerHTML = msg;
+
+    }
+
+</script>

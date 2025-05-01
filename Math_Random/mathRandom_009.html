@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nota aleatoria 2</title>
+</head>
+<body>
+    <button onclick="nota()">Gerar uma nota de aluno entre 3 e 10</button>
+    <br>
+    <button onclick="freq()">Gerar uma frequência de 50 e 100</button>
+    <br>
+    <button onclick="alerta()">Ver situação</button>
+    <div id="div_msg"></div>
+</body>
+</html>
+
+<script>
+
+var aleatorioNota = 0;
+var aleatorioFreq = 0;
+
+    function nota(){
+
+        var msg = "";
+        aleatorioNota = Math.floor(Math.random() * 8 + 3).toFixed(1);
+        msg = aleatorioNota;
+        
+
+        div_msg.innerHTML = msg;
+
+    }
+
+    function freq(){
+
+        var msg = "";
+        aleatorioFreq = Math.floor(Math.random() * 51 + 50).toFixed(1);
+        msg = aleatorioFreq;
+
+
+        div_msg.innerHTML = msg;
+
+    }
+
+    function alerta(){
+        
+        var msg = "";
+        var texto = "";
+
+        if(aleatorioNota >= 6 && aleatorioFreq >= 75){
+         
+        texto = `Aprovado`;
+        msg = `Com frequência  ${aleatorioFreq}, e nota ${aleatorioNota} o aluno está ${texto}`;   
+        
+        }else{
+
+        texto = `Reprovado`;
+        msg = `Com frequência  ${aleatorioFreq}, e nota ${aleatorioNota} o aluno está ${texto}`;   
+
+        }
+        div_msg.innerHTML = msg;
+        
+
+    }
+
+</script>

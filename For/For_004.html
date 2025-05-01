@@ -4,6 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Café com leite</title>
+    <style>
+
+        img{
+
+            height:200px;
+
+        }
+
+    </style>
 </head>
 <body>
     Quantos café com leite na vida?
@@ -20,14 +29,15 @@
     function ver(){
 
         var cafeLeite = Number(input_cafeLeite.value);
-        var leite = cafeLeite;
-        var cafe = cafeLeite * 2;
+        var leite = "<img src = https://midias.em.com.br/_midias/jpg/2024/06/30/copo_de_leite-38564104.jpg>";
+
+        var cafe = "<img src = https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhfWF4-LjFLsjvY7nRQZoAq9H-jzGFHHmM39xLBmu6B5rGIzrER1rEFcu-vNMvz0MnqBZ0gluHXoYAeK_xOinLlazsvPP99fM1D1gt-awD1_mfAEo5BYi5krMTknROMZ-yT13alInTfYn_BnyS2fhYiBjEUmCIOf-IE4xYc7xShVFd2toFIlGyqfGMbGG8t/s650/Colher%20de%20caf%C3%A9.jpg>";
 
         var msg = "";
 
         for (c = 0; c < cafeLeite; c++){
 
-            msg += `${leite}, ${cafe}<br>`;
+            msg += `${leite}, ${cafe}, ${cafe} <br>`;
 
         }
 
