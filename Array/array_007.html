@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filmes</title>
+</head>
+<body>
+    Insira um filme:
+        <input type="text" id="input_filme">
+    <br><br>
+    <button onclick="cadastro()">Cadastra filme</button>
+    <br><br>
+    <div id="div_msg"></div>
+</body>
+</html>
+
+<script>
+
+    var filme = []
+
+    function cadastro(){
+
+        div_msg.innerHTML = "";
+
+        var filmes = input_filme.value;
+        filme.push(filmes);
+
+    for(i = 0; i < filme.length; i++){
+     
+
+    if(i % 2 == 0){
+        
+        div_msg.innerHTML += `<span style="color:red;">${filme[i]} <span><br>`;
+
+    }else{
+
+        div_msg.innerHTML += `<span style="color:blue;">${filme[i]} <span><br>`;
+
+
+    }
+
+    }
+
+    }
+
+</script>

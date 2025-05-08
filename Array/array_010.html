@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ônibus</title>
+</head>
+<body>
+    <input type="text" id="input_onibus">
+<br><br>
+    <button onclick="cadastro()">Gravar Busão</button>
+<br><br>
+    <input type="text" id="input_pesquisa">
+<br><br>
+    <button onclick="pesquisa()">Pesquisar</button>
+<div id="div_msg"></div>
+</body>
+</html>
+
+<script>
+
+    onibus = [];
+
+    function cadastro(){
+
+        var oni = input_onibus.value;
+        onibus.push(oni);
+
+    }
+
+    function pesquisa(){
+
+        var pesq = input_pesquisa.value;
+
+        for(i = 0; i < onibus.length; i++){
+
+            if(pesq == onibus[i]){
+
+                div_msg.innerHTML = `Você já pegou essa linha ${i + 1} vezes`;
+
+            }else{
+
+                div_msg.innerHTML = `Você nunca pegou essa linha`;
+
+            }
+
+        }
+
+    }
+
+</script>

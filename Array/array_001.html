@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frutas</title>
+</head>
+<body>
+    Insira uma fruta:
+        <input type="text" id="input_fruta">
+    <br><br>
+    <button onclick="pesquisar()">Pesquisar</button>
+    <div id="div_msg"></div>
+</body>
+</html>
+
+<script>
+
+var nomes = ["Manga", "Abacaxi", "Laranja"];
+
+function pesquisar(){
+    var fruta = input_fruta.value;
+
+    var msg = "";
+
+    var tem = `A fruta ${fruta} está na lista`;
+
+    if(nomes.includes(fruta)){
+
+        msg = `${tem}`;
+
+    }else{
+
+        msg = `Não tem`;
+
+    }
+
+    div_msg.innerHTML = msg;
+}
+    
+</script>

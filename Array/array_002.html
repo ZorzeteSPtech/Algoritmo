@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diário</title>
+</head>
+<body>
+    Destino de viagem:
+        <input type="text" id="input_viagem">
+    <br><br>
+    <button onclick="adicionar()">Adicionar</button>
+    <br><br>
+    <button onclick="primeiro()">Primeira viagem</button>
+    <button onclick="terceiro()">Terceira viagem</button>
+    <button onclick="ultimo()">Última viagem</button>
+    <div id="div_msg"></div>
+</body>
+</html>
+
+<script>
+
+    var destino = [];
+
+    function adicionar(){
+
+        var viagem = input_viagem.value;
+
+        destino.push(viagem);
+
+    }
+
+    function primeiro(){
+
+        if(destino[0] == null){
+
+            div_msg.innerHTML = `Ainda não fez a primeira viagem`;
+
+        }else{
+
+            div_msg.innerHTML = `${destino[0]}`;
+        
+        }
+
+    }
+    function terceiro(){
+
+    if(destino[2] == null){
+
+        div_msg.innerHTML = `Ainda não fez a terceira viagem`
+
+    }else{
+    
+        div_msg.innerHTML = `${destino[2]}`;
+    
+    }
+
+    }
+    function ultimo(){
+
+        for(i = 0; i < destino.length; i++){
+
+            if(destino[i] == undefined){
+
+                div_msg.innerHTML = `Ainda não fez uma viagem`;
+
+            }else{
+
+                div_msg.innerHTML = `${destino[i]}`;
+
+            }
+
+        }
+
+
+
+    }
+
+
+
+</script>

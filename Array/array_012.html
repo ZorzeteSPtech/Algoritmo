@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filhos</title>
+</head>
+
+<body>
+    Nome dos filhos:
+    <input type="text" id="input_filho">
+    <br><br>
+    <button onclick="cadastro()">Cadastrar</button>
+    <button onclick="atualiza()">Atualizar familia</button>
+    <div id="div_msg"></div>
+</body>
+
+</html>
+
+<script>
+
+    var cadastra = [];
+
+    function cadastro() {
+
+        var filho = input_filho.value;
+
+
+
+        if (filho == cadastra.includes(cadastra)) {
+
+            alert(`Já existe essa pessoa`)
+
+        } else {
+
+            cadastra.push(filho);
+
+        }
+
+    }
+
+        function atualiza() {
+
+            var msg = "";
+
+
+            msg = `Você tem ${cadastra.length} filhos. <br>
+
+                Seu custo mensal será aproximadamente R$${cadastra.length * 3000} colocá-los em escola particular 
+                ou R$${cadastra.length * 1500} se eles estudarem em escola pública`
+
+            div_msg.innerHTML = msg;
+
+        }
+
+</script>

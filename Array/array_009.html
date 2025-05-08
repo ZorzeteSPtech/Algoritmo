@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projetos</title>
+</head>
+
+<body>
+    Registrar projeto:
+    <input type="text" id="input_projeto">
+    <br><br>
+    <button onclick="registro()">Registrar projeto</button>
+    <button onclick="mostrar()">Mostrar projetos</button>
+    <div id="div_msg"></div>
+</body>
+
+</html>
+
+<script>
+
+    var proj = [];
+
+    function registro() {
+
+        var registro = input_projeto.value;
+
+        proj.push(registro);
+
+        var prof = `Por isso você é um profissional `
+        var junior = `${prof} Junior`;
+        var pleno = `${prof} Pleno`;
+        var senior = `${prof} Senior`;
+
+        div_msg.innerHTML = `Você já fez ${proj.length} projetos. `
+
+        if (proj.length <= 4) {
+
+            div_msg.innerHTML += `${junior}`;
+
+        } else if (proj.length <= 12) {
+
+            div_msg.innerHTML += `${pleno}`;
+
+        } else {
+
+            div_msg.innerHTML += `${senior}`;
+
+        }
+
+    }
+
+    function mostrar() {
+
+        msg = "";
+
+        for (i = proj.length-1; i >= 0; i--) {
+
+            msg += `<br>${proj[i]}`;
+
+        }
+
+        div_msg.innerHTML = msg;
+
+    }
+
+</script>

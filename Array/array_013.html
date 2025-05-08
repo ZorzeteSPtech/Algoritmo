@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo</title>
+</head>
+<body>
+    Indique o resultado:
+        <select id="select_status">
+
+            <option value="#">Resultados</option>
+            <option value="1">Vitória</option>
+            <option value="2">Empate</option>
+            <option value="3">Derrota</option>
+
+        </select>
+        <br><br>
+        <button onclick="registrar()">Registrar jogo</button>
+    <div id="div_msg"></div>
+</body>
+</html>
+
+<script>
+
+    var result = [];
+
+    
+            var pontosV = 0;
+            var pontosE = 0;
+            var pontosD = 0;
+            var pontosTotal = 0;
+
+        function registrar(){
+
+            var status = select_status.value;
+            result.push(status);
+
+
+        if(status == 1){
+            
+            pontosV++;
+            pontosTotal += 3;
+        
+        }else if(status == 2){
+
+            pontosE++;
+            pontosTotal += 1;
+
+        }else{
+
+            pontosD++;
+
+        }
+
+        var aproveita = (pontosTotal) / 100;
+
+        div_msg.innerHTML = `O time teve ${pontosV} vitórias, ${pontosE} empates e ${pontosD} derrotas.<br>
+                            Pontuação total: ${pontosTotal}<br>
+                            Aproveitamento: ${aproveita}%`;
+
+
+        }
+
+</script>

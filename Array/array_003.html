@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relembrando Moradias</title>
+</head>
+<body>
+    Bairros onde morou:
+        <input type="text" id="input_bairro">
+    <br><br>
+        <button onclick="cadastrar()">Cadastrar Bairro</button>
+    <br><br>
+    Numero que você quer ver:
+        <input type="number" id="input_numero">
+    <br><br>
+        <button onclick="relembrar()">Relembrar moradia</button>
+    <br>
+    <div id="div_msg"></div>
+</body>
+</html>
+
+<script>
+
+    var bairro = []
+
+    function cadastrar(){
+
+        var bairros = input_bairro.value;
+        bairro.push(bairros);
+
+    }
+
+    function relembrar(){
+
+        var num = Number(input_numero.value);
+
+            if(num < 1){
+
+                div_msg.innerHTML = `Não tem valores inseridos`;
+
+            }else if(bairro.length < num){
+
+                div_msg.innerHTML = `Ainda não morou num ${num}° bairro`;
+                
+            }else{
+
+                div_msg.innerHTML = `${bairro[num - 1]}`;
+
+            }
+// unshift
+        }
+
+
+</script>
