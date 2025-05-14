@@ -25,24 +25,39 @@
 
         var oni = input_onibus.value;
         onibus.push(oni);
+        div_msg.innerHTML = "";
+
+        for(i=onibus.length -1; i >= 0; i--){
+
+            div_msg.innerHTML += onibus[i] + "<br>";
+
+        }
 
     }
 
     function pesquisa(){
 
         var pesq = input_pesquisa.value;
+        var onibusLargura = [];
+
+        var msg = "";
 
         for(i = 0; i < onibus.length; i++){
 
             if(pesq == onibus[i]){
 
-                div_msg.innerHTML = `Você já pegou essa linha ${i + 1} vezes`;
+                onibusLargura.push(i+1)
+
+                msg += onibusLargura.length + ", ";
 
             }else{
 
                 div_msg.innerHTML = `Você nunca pegou essa linha`;
 
             }
+
+            div_msg.innerHTML = `Você já pegou essa linha ${i + 1} vezes
+            na ordem ${msg}`;    
 
         }
 
