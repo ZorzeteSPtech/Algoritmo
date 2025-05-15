@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7 e Meio</title>
+</head>
+<body>
+
+    <div id="div_jogo">
+        <button onclick="jogar()">Jogar</button>
+
+        <div id="div_msg"></div>
+    </div>
+
+</body>
+</html>
+
+<script>
+
+    var carta = ["Ás", "2", "3", "4", "5", "6", "7", "Valete", "Dama", "Rei"];
+    var naipe = ["Paus", "Espada", "Ouro", "Diamante"];
+
+
+    var total = 0;
+
+    function jogar(){
+
+        div_jogo.innerHTML = `<button onclick="comprar()">Comprar Carta</button>
+                              <button onclick="pular()">Pular vez</button>`;
+
+        
+
+    }
+
+    function comprar(){
+
+        var msg = "";
+        
+        msg = `(PontosTotais pontos) - Carta de ZZZZZ`;
+
+    }
+
+</script>
