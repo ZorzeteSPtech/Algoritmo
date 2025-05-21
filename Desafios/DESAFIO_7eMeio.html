@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>7 e Meio</title>
 </head>
+
 <body>
 
     <div id="div_jogo">
         <button onclick="jogar()">Jogar</button>
-
-        <div id="div_msg"></div>
     </div>
+    <div id="div_msg"></div>
 
 </body>
+
 </html>
 
 <script>
@@ -24,20 +26,26 @@
 
     var total = 0;
 
-    function jogar(){
+    function jogar() {
 
         div_jogo.innerHTML = `<button onclick="comprar()">Comprar Carta</button>
                               <button onclick="pular()">Pular vez</button>`;
 
-        
+
 
     }
 
-    function comprar(){
+    function comprar() {
 
         var msg = "";
+
+        var random = Math.floor(Math.random() * 10);
+        var naipeRandom = Math.floor(Math.random() * 4);
         
-        msg = `(PontosTotais pontos) - Carta de ZZZZZ`;
+        msg = `(${random}) - Carta de ${naipeRandom}`;
+
+
+        div_msg.innerHTML = msg;
 
     }
 

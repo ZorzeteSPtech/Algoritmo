@@ -1,56 +1,123 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Desafio</title>
 </head>
+
 <body>
     Nome do produto:
-        <inptu id="input_nome"></inptu>
+    <input id="input_nome"></input>
     <br><br>
     Código do produto:
-        <input type="text" id="input_codigo">
+    <input type="text" id="input_codigo">
     <br><br>
     Quantidade do Produto:
-        <input type="number" id="input_qtd">
+    <input type="number" id="input_qtd">
     <br><br>
-    <button onclick="cadastro()">Cadastrar Produto</button>
+    <button onclick="cadastrar()">Cadastrar Produto</button>
     <button onclick="repor()">Repor Estoque</button>
     <br>
-    <button onclick="vende()">Vender Produto</button>
+    <button onclick="vender()">Vender Produto</button>
     <button onclick="exibir()">Exibir Relatório</button>
     <br><br>
     <div id="div_msg"></div>
 </body>
+
 </html>
 
 <script>
 
     lista_cadastro = [];
-    lista_repor = [];
-    lista_vende = [];
-    lista_exibir = [];
+    lista_qtd = [];
+    lista_codigo = [];
 
-    function cadastro(){
+    function cadastrar() {
 
-        
+        var nome = input_nome.value;
+        var codigo = input_codigo.value;
+        var qtd = Number(input_qtd.value);
+
+        if (nome != "" && codigo != "" && qtd >= 10) {
+
+            var includes = false;
+
+            for (var i = 0; i < lista_codigo.length; i++) {
+
+                if (codigo == lista_codigo[i]) {
+
+                    includes = true;
+                    break;
+
+                }
+
+            }
+
+            if (includes) {
+
+                alert(`Já existe esse código`);
+
+            } else {
+
+                alert(`${nome} foi cadastrado com sucesso!`);
+                lista_cadastro.push(nome);
+                lista_codigo.push(codigo);
+                lista_qtd.push(qtd);
+
+            }
+
+        }
 
     }
-    function repor(){
+
+    function repor() {
 
 
 
     }
-    function vende(){
+    function vender() {
+
+        var nome = input_nome;
+        var codigo = input_codigo;
+        var qtd = Number(input_qtd);
+
+        var indiceNaLista = -1;
+
+        for (var i = 0; i < lista_codigo.length; i++) {
+
+            if (nome == lista_cadastro[i] && codigo == lista_codigo[i]) {
+
+                indiceNaLista = i;
+                break;
+            }
+
+        }
+
+        if (indiceNaLista == -1) {
+
+            alert(`Produto não identificado`);
+
+        } else {
 
 
+            if (qtd <= lista_qtd(indiceNaLista)) {
 
+                lista_quantidade[indiceNaLista] -= qtd;
+
+            } else {
+
+                alert(`Quantidade inválida`);
+
+            }
+
+        }
     }
-    function exibir(){
+        function exibir() {
 
 
 
-    }
+        }
 
 </script>
