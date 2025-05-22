@@ -74,6 +74,41 @@
 
     function repor() {
 
+        var nome = input_nome;
+        var codigo = input_codigo;
+        var qtd = Number(input_qtd);
+
+        var indiceNaLista = -1;
+
+        for (var i = 0; i < lista_codigo.length; i++) {
+
+            if (nome == lista_cadastro[i] && codigo == lista_codigo[i]) {
+
+                indiceNaLista = i;
+                break;
+            }
+
+        }
+
+        if (indiceNaLista == -1) {
+
+            alert(`Produto não identificado`);
+
+        } else {
+
+
+            if (qtd > 0) {
+
+                lista_qtd[indiceNaLista] += qtd;
+                alert(`Inserindo ${qtd} do produdo!`);
+
+            } else {
+
+                alert(`Quantidade inválida`);
+
+            }
+
+        }
 
 
     }
@@ -102,22 +137,24 @@
         } else {
 
 
-            if (qtd <= lista_qtd(indiceNaLista)) {
+            if (qtd <= lista_qtd[indiceNaLista]) {
 
-                lista_quantidade[indiceNaLista] -= qtd;
+                lista_qtd[indiceNaLista] -= qtd;
+                alert(`Vendendo ${qtd} do produdo!`);
 
             } else {
 
-                alert(`Quantidade inválida`);
+                alert(`Quantidade inválida, você tem apenas ${indiceNaLista} na lista`);
 
             }
 
         }
+
     }
-        function exibir() {
+    function exibir() {
 
 
 
-        }
+    }
 
 </script>

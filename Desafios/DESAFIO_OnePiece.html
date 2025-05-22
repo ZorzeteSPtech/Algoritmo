@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>One Piece</title>
+</head>
+
+<body>
+    Cadastrar estoque de comidas:
+    <input type="text" id="input_cadastro">
+    <br><br>
+    <button onclick="cadastrar()">Cadastrar</button>
+    <button onclick="verificar()">Verificar</button>
+
+    <br><br>
+
+    <hr>
+
+    <section class="existe">
+
+        Pesquisar:
+        <input type="text" id="input_pesquisa">
+        <button onclick="pesquisar()">Persquisar</button>
+        <button onclick="exibir()">Exibir</button>
+
+    </section>
+
+    <br><br>
+
+    <hr>
+
+    <section class="atualiza">
+
+        Nome a atualizar:
+            <input type="text" id="input_atualizar">
+        Nome Atualizado:
+            <input type="text" id="input_atualizado">
+        <button onclick="atualizar()">Atualizar</button>
+
+    </section>
+
+    <br><br>
+
+    <hr>
+
+    Nome a remover:
+        <input type="text" id="input_remover">
+    <button onclick="remover()">Remover</button>
+
+    <br><br>
+    
+    <hr>
+
+    <div id="div_msg"></div>
+
+</body>
+
+</html>
+
+<script>
+
+    var comidas = [];
+
+    function cadastrar() {
+
+        var comida = input_cadastro.value;
+
+        comidas.push(comida);
+
+    }
+
+    function verificar() {
+
+        var qtdEstoque = comidas.length;
+
+        var msg = "";
+
+        if (qtdEstoque < 3) {
+
+            msg = `Desse jeito, o Luffy devora até o navio`;
+
+        }
+        else if (qtdEstoque <= 7) {
+
+            msg = `O comilão do Luffy não vai deixar sobrar nenhuma comida`;
+
+        }
+        else if (qtdEstoque < 10) {
+
+            msg = `Assim, talvez sobre um pouco para a tripulação`;
+
+        }
+        else {
+
+            msg = `Desse jeito vai ter comida para todo mundo e ainda consigo guardar um pouco para a senhorita Nami!`;
+
+        }
+
+        div_msg.innerHTML = msg;
+
+    }
+
+    function pesquisar() {
+
+        var pesquisa = input_pesquisa.value;
+
+        var unidades = 0;
+
+        if (comidas.includes(pesquisa)){
+
+            for(var i = 0; i < comidas.length; i++){
+
+                if (comidas[i] == pesquisa){
+
+                    unidades++;
+
+                }
+
+            div_msg.innerHTML = `Temos a comida ${comidas[i]} e há ${i} unidade(s) dela`;
+
+
+            }
+
+        }else{
+
+            div_msg.innerHTML = `Comida não encontrada`;
+
+        }
+
+    }
+
+    function exibir(){
+
+        var produtos_exibir = [];
+        var unidade_exibir = [];
+
+        for(var i = 0; i < comidas.length; i++){
+
+            var comida_atual = comidas[i];
+
+            // for (var j = 0; j < comidas.length; j++){
+            //     console.log(`${i} ${j}`)
+            // }
+
+            if (produto_exibir.includes(comida_atual)){
+
+                // unidade_exibir[i]++;
+                if(produto_exibir.indexOf(comida_atual)){
+
+                    unidade_exibir[produto_exibir.indexOf(comida_atual)]++
+
+                }
+
+            }else{
+
+                produtos_exibir.push(comida_atual);
+                unidade_exibir.push(1);
+
+            }
+
+        }
+
+        for (var i = 0; i < comida.length; i++){
+
+            if(unidade_exibir[i] == 1 ){
+
+            div_msg.innerHTML += `${produto_exibir[i]} - ${unidade_exibir[i]}`;
+            
+        }else{
+
+            div_msg.innerHTML += `${produto_exibir[i]} - ${unidade_exibir[i]}`;
+
+        }
+
+        }
+
+    }
+
+    function atualizar(){
+
+        var nome_atualizar = input_atualizar.value;
+        var nome_atualizado = input_atualizado.value;
+
+if (comidas.includes(nome_atualizar)){
+
+        for (var i = 0; i < comidas.length; i++){
+
+            if (comidas[i] == nome_atualizar){
+
+                comidas[i] = nome_atualizado;
+
+            }
+
+        }
+
+        div_msg.innerHTML = `A comida ${nome_atualizar} foi adicionada`;
+
+    }else{
+
+        div_msg.innerHTML = `A comida ${nome_atualizar} não existe`;
+
+    }
+
+
+    }
+
+    function remover(){
+
+        var nome_remover = input_remover.value;
+
+        div_msg.innerHTML = "Não encontrou";
+
+        while (comidas.includes(nome_remover)){
+
+            var indice_remover = comidas.indexOf(nome_remover);
+            comidas.splice(indice_remover, 1);
+
+            div_msg.innerHTML + "Removido com sucesso!";
+
+        }
+
+    }
+
+
+</script>
