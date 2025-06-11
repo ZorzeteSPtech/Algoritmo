@@ -31,6 +31,8 @@
             var pontosD = 0;
             var pontosTotal = 0;
 
+            var possivel = 0;
+
         function registrar(){
 
             var status = select_status.value;
@@ -41,19 +43,23 @@
             
             pontosV++;
             pontosTotal += 3;
+            possivel += 3;
         
         }else if(status == 2){
 
             pontosE++;
             pontosTotal += 1;
+            possivel += 3;
 
         }else{
 
             pontosD++;
+            possivel += 3;
 
         }
 
-        var aproveita = (pontosTotal) / 100;
+
+        var aproveita = (pontosTotal / possivel) * 100;
 
         div_msg.innerHTML = `O time teve ${pontosV} vitórias, ${pontosE} empates e ${pontosD} derrotas.<br>
                             Pontuação total: ${pontosTotal}<br>

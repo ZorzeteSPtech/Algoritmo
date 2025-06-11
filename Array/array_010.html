@@ -35,33 +35,23 @@
 
     }
 
-    function pesquisa(){
-
-        var pesq = input_pesquisa.value;
-        var onibusLargura = [];
-
-        var msg = "";
-
-        for(i = 0; i < onibus.length; i++){
-
-            if(pesq == onibus[i]){
-
-                onibusLargura.push(i)
-
-                msg += onibusLargura[i] + ", ";
-
-            }else{
-
-                div_msg.innerHTML = `Você nunca pegou essa linha`;
-
+        function pesquisa() {
+            var pesq = input_pesquisa.value;
+            var indices = "";
+            var count = 0;
+            
+            for(var i = 0; i < onibus.length; i++) {
+                if(onibus[i] === pesq) {
+                    count++;
+                    indices += (i + 1) + ", ";
+                }
             }
-
-
-            div_msg.innerHTML = `Você já pegou essa linha ${i + 1} vezes
-            na ordem ${msg}`;
-
+            
+            if(count == 0) {
+                div_msg.innerHTML = "Você nunca pegou essa linha";
+            } else {
+                div_msg.innerHTML = "Você já pegou essa linha " + count + " vezes, nessa ordem: " + indices;
+            }
         }
-
-    }
 
 </script>

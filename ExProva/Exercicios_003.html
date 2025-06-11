@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registro de Produtos</title>
+  </head>
+  <body>
+    Preço do produto:
+    <input type="number" id="input_preco" />
+    <br /><br />
+    Nome do produto:
+    <input type="text" id="input_nome" />
+    <br /><br />
+    <button onclick="cadastro()">Cadastrar</button>
+    <button onclick="atualizar()">Atualizar Estoque</button>
+    <div id="div_msgAtualiza"></div>
+    <br /><br />
+    <select id="select_preco">
+      <option value="#">Escolha o preço</option>
+      <option value="1">Preços acima de</option>
+      <option value="2">Preços abaixo de</option>
+    </select>
+    <input type="number" id="input_valor" />
+    <br /><br />
+    <button onclick="filtrar()">Filtrar Produtos</button>
+    <div id="div_msgFiltro"></div>
+  </body>
+</html>
+
+<script>
+  var produto = [];
+
+  function cadastro() {
+    var preco = input_preco.value;
+    var nome = input_nome.value;
+
+    var msg = "";
+
+    if (nome == "" || preco == "") {
+      msg = `Insira valores validos em todos os campos`;
+    } else if (nome.length <= 3) {
+      msg = `Nome tem que ter mais de 3 letra`;
+    } else if (preco < 0) {
+      msg = `Preco inválido`
+    } else {
+      msg = `Cadastro bem sucedito`;
+      produto.push(preco, nome);
+    }
+
+    div_msgAtualiza.innerHTML = msg;
+  }
+
+  function atualizar() {
+
+    var msg = "";
+
+    var cont = 1;
+
+    var total = 0;
+
+
+    for (var i = 0; i < produto.length; i++) {
+
+
+        if (i % 2 == 0){
+
+            msg += cont + ". " + "R$" + produto[i] + " ";
+            cont++;
+            total += Number(produto[i]);
+
+        }else{
+
+            msg +=  produto[i] + "<br>";
+
+        }
+
+    }
+
+    msg = `Você tem ${produto.length / 2} produtos cadastrados em estoque: <br>
+
+            ${msg}<br>
+
+            Seu estoque vale R$${total}`;
+
+    div_msgAtualiza.innerHTML = msg;
+  }
+
+  function filtrar() {
+
+    var msg = "";
+
+    var preco = select_preco.value;
+    var valor = input_valor.value;
+
+    for (var i = 0; i < produto.length; i++){
+
+        if (preco == 1){
+
+            
+
+        }
+
+    }
+
+  }
+
+
+</script>
